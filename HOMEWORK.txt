@@ -1,0 +1,29 @@
+
+                Q1.PRODUCT
+
+SELECT*from product;
+SELECT product_name,unit_price from product;
+SELECT  product_name from product where category = 'Electronic';
+SELECT product_id,product_name from product where unit_price>1000;
+SELECT avg(unit_price) from product;
+SELECT product_name, max(unit_price) as high_price from product group by product_name limit 2 offset 3;
+SELECT product_name,unit_price from product order by unit_price desc;
+SELECT product_name,category from product order by product_name;
+
+
+
+
+
+                Q2.SALES
+
+
+
+
+SELECT*from sales;
+SELECT sale_id,sale_date from sales;
+SELECT total_price from sales where total_price>100;
+SELECT sale_id,total_price  from sales where  sale_date>='2024-01-03';
+SELECT sum(total_price) from sales;
+SELECT sum(quantity_sold) from sales;
+SELECT sale_id,product_id,total_price from sales where quantity_sold>4;
+SELECT AVG(total_price) from sales; 
